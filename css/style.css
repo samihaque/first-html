@@ -9,10 +9,19 @@ h1{
     /* background-color: pink; */
 }
 
-#flex-container{
+
+.flex-container{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.flex-wrap{
     flex-wrap: wrap;
     width: 435px;
+}
+#game-heading{
+    flex-direction: column;
 }
 #main-message{
     
