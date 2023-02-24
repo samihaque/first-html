@@ -11,7 +11,8 @@ const winningCombos = [
     ];
 /*----- app's state (variables) -----*/
 let board;
-let turn = 'X'
+
+let turn;
 let win;
 /*----- cached element references -----*/
 const squares = Array.from(document.querySelectorAll('#board div'));
@@ -28,6 +29,9 @@ function init() {
         '', '', '',
         '', '', ''
     ];
+    let toss = Math.floor(Math.random()*2);
+    turn = toss === 0? 'X': 'O'
+    
     rander()
 };
 
