@@ -31,7 +31,7 @@ function init() {
     ];
     let toss = Math.floor(Math.random()*2);
     turn = toss === 0? 'X': 'O'
-    
+    win= ''
     rander()
 };
 
