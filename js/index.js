@@ -2,13 +2,14 @@
 /*----- app's state (variables) -----*/
 let board;
 /*----- cached element references -----*/
+const squares = Array.from(document.querySelectorAll('#board div'));
 /*----- event listeners -----*/
 /*----- functions -----*/
 function init() {
     board = [
         '', '', '',
-        's', 'a', 'm',
-        'i', '', ''
+        '', '', '',
+        '', '', ''
     ];
     rander()
 };
@@ -18,8 +19,11 @@ init();
 // declaring rander function
 function rander(){
     board.forEach((mark, index) => {
-        console.log(mark, index)
+        
+        //this sets the text content of the square of the same index to the mark on the board.
+        squares[index].textContent = mark;
     });
+
 }
 
 
