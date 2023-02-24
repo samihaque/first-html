@@ -7,22 +7,32 @@ let board;
 function init() {
     board = [
         '', '', '',
-        '', '', '',
-        '', '', ''
+        's', 'a', 'm',
+        'i', '', ''
     ];
+    rander()
 };
-    //calling the init function!
+//calling the init function!
 init();
 
-let squares = document.getElementsByClassName('square');
-console.log(squares)
-
-// let board = document.getElementById('board')
-console.log(board)
-
-let handleClick = () =>{
-    // do stuff
-    console.log('clicked!');
+// declaring rander function
+function rander(){
+    board.forEach((mark, index) => {
+        console.log(mark, index)
+    });
 }
 
-board.addEventListener('click', handleClick);
+
+
+// let squares = document.getElementsByClassName('square');
+// console.log(squares)
+
+// // let board = document.getElementById('board')
+// console.log(board)
+
+// let handleClick = () =>{
+//     // do stuff
+//     console.log('clicked!');
+// }
+
+// board.addEventListener('click', handleClick);
