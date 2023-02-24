@@ -7,6 +7,7 @@ const squares = Array.from(document.querySelectorAll('#board div'));
 /*----- event listeners -----*/
 document.getElementById('board').addEventListener('click', handleTurn);
 /*----- functions -----*/
+// board initialization
 function init() {
     board = [
         '', '', '',
@@ -15,8 +16,6 @@ function init() {
     ];
     rander()
 };
-//calling the init function!
-init();
 
 // declaring rander function
 function rander(){
@@ -26,6 +25,21 @@ function rander(){
     });
 
 }
+
+// declaring a function to handle turn
+function handleTurn(event){
+    let idx = squares.findIndex(function(square){
+        return square=== event.target;
+    })
+    board[idx] = turn;
+    turn = turn === 'X'? 'O': 'X';
+    rander();
+    console.log(board)
+}
+
+//calling the init function!
+init();
+
 
 
 
